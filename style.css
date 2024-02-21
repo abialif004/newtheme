@@ -1,0 +1,194 @@
+/*
+Theme Name: newtheme
+Text Domain: newtheme
+Version: 1.0
+Description: Testbyte light theme
+Tags: Working, simple, single paged theme
+Author: Abi Alif
+Author URI: https://www.acetvm.com
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --primary: #0D171C;
+    --secondary: #4F7A96;
+    --white: #E8EDF2;
+    --dark-blue: #082E45;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --green: #25D366;
+    --pink: #ff00c3;
+    --size: 14px;
+    --font-family: "Plus Jakarta Sans", sans-serif;
+    --font-optical-sizing: auto;
+
+}
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: var(--font-family);
+    font-size: 10px;
+    line-height: 2em;
+
+}
+
+body {
+    background-color: var(--white);
+}
+
+/*------------------ Navigation bar -------------------*/
+header {
+    background-color: #fff;
+    height: 8.4em;
+    /* border: 1px solid green; */
+
+}
+
+header * {
+    color: var(--primary);
+    /* border: 1px solid red; */
+}
+
+header .nav-title {
+    /* border: 1px solid green; */
+    float: left;
+    height: inherit;
+    margin-left: 2.8em;
+}
+
+header .nav-logo {
+    /* border: 1px solid red; */
+    height: 50%;
+    margin-top: 1.4em;
+    width: auto;
+}
+
+header .logo-container {
+    /* border: 1px solid red; */
+    height: inherit;
+}
+
+header .drawer-icon {
+    display: none;
+}
+
+/* header .nav-title .text-wrapper {
+    display: inline;
+    position: relative;
+} */
+
+header .nav-title .logo-text {
+    /* border: 1px solid red; */
+    display: block;
+    float: right;
+    font-size: 2.8em;
+    color: var(--primary);
+    font-weight: 800;
+    padding-left: .2em;
+    margin-top: .25em;
+}
+
+.logo-text:hover, .logo-text:visited {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+
+/* -------Navigation Elements --------- */
+
+
+
+header ul {
+    list-style-type: none;
+}
+
+header .site-nav {
+    float: right;
+    display: flex;
+    width: 70%;
+
+}
+
+header ul li {
+    float: left;
+}
+
+header ul li a {
+    display: block;
+    padding: 1.8em 1.7em;
+    font-size: 1.5rem;
+    /* border: 1px solid red; */
+}
+
+
+/* ------Navigaton Social Media Buttons------- */
+
+
+header .nav-social-media {
+    /* border: 1px solid red; */
+    position: relative;
+    width: 30%;
+    /* border: 1px solid red; */
+}
+
+header .cst-nav-btn {
+    position: absolute;
+    padding: .8em 1.8em;
+    margin: 5px;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 3em;
+    border: 2px solid var(--primary);
+    font-size: 1.3em;
+    font-weight: 600;
+
+
+}
+
+header .nav-wp {
+    top: auto;
+    border-color: var(--green);
+}
+
+header .nav-ins {
+    left: 45%;
+}
+
+.nav-social-media .nav-wp i {
+    vertical-align: middle;
+    /* border: 1px solid red; */
+    color: var(--green);
+    font-size: 2em;
+    padding-left: .3rem;
+}
+
+header .nav-ins {
+    top: 25%;
+    border-color: var(--pink);
+}
+
+.nav-social-media .nav-ins i {
+    vertical-align: middle;
+    /* border: 1px solid red; */
+    color: var(--pink);
+    font-size: 2em;
+    padding-left: .3rem;
+}
+
+
+/* img {
+    width: 80%;
+    height: 512px;
+}
+
+.nav-items {
+    list-style-type: none;
+}
+
+.nav-items .nav-item, a {
+    float: left;
+    padding: 0px 10px;
+} */
