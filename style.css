@@ -13,20 +13,29 @@ Author URI: https://www.acetvm.com
 :root {
     --primary: #0D171C;
     --secondary: #4F7A96;
+    --secondary-light: #758590;
     --white: #E8EDF2;
     --pure-white: #fff;
     --dark-blue: #082E45;
     --warning: #ffc107;
     --danger: #dc3545;
+    --light-border: #D1DEE8;
     --green: #25D366;
     --pink: #ff00c3;
+    --test-border: 1px solid green;
+    --red-test-border: 1p solid red;
+    --title-font: 4.8em;
+    --padding-rectangular: 1.1em 12.5em;
     --size: 14px;
+    --descprtion-font-size: 16px;
     --font-family: "Plus Jakarta Sans", sans-serif;
     --font-optical-sizing: auto;
 
 }
 
+
 * {
+
     padding: 0;
     box-sizing: border-box;
     margin: 0;
@@ -36,13 +45,33 @@ Author URI: https://www.acetvm.com
 
 }
 
-body {
-    background-color: var(--white);
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
 }
+
+body {
+    background-color: var(--pure-white);
+}
+
+input {
+    outline: none !important;
+}
+
+.banner-btn {
+    border-radius: .8em;
+    border: none;
+    background-color: var(--dark-blue);
+    color: var(--pure-white);
+    font-weight: 600;
+    font-size: 1.4em;
+    padding: 1.1em 2.1em;
+}
+
 
 /*------------------ Navigation bar -------------------*/
 header {
-    background-color: #fff;
+    background-color: var(--pure-white);
     height: 8.4em;
     /* border: 1px solid green; */
 
@@ -81,6 +110,10 @@ header .drawer-icon {
     position: relative;
 } */
 
+.header-hr {
+    margin-bottom: 3em;
+}
+
 header .nav-title .logo-text {
     /* border: 1px solid red; */
     display: block;
@@ -108,7 +141,7 @@ header ul {
 
 header .site-nav {
     float: right;
-    display: flex;
+    /* display: flex; */
     width: 70%;
 
 }
@@ -118,11 +151,19 @@ header ul li {
 }
 
 header ul li a {
+    color: var(--primary);
     display: block;
     padding: 1.8em 1.7em;
     font-size: 1.5rem;
     /* border: 1px solid red; */
 }
+
+header ul li a:hover {
+    text-decoration: none;
+    animation: nav-elm-animation .4s ease-in;
+
+}
+
 
 
 /* ------Navigaton Social Media Buttons------- */
@@ -141,7 +182,7 @@ header .cst-nav-btn {
     padding: 0px 1em;
     background-color: transparent;
     box-shadow: none;
-    border-radius: 4em;
+    border-radius: .8em;
     border: 2px solid var(--primary);
     font-size: 1.3em;
     font-weight: 600;
@@ -182,7 +223,9 @@ header .nav-ins {
     padding-left: .3rem;
 }
 
-/* -------Navigation Buttons Animations */
+
+
+/* -------Navigation  Animations */
 .nav-social-media .nav-wp:hover,
 .nav-social-media .nav-wp:hover>i {
     background-color: var(--green);
@@ -194,6 +237,480 @@ header .nav-ins {
     background-color: var(--pink);
     color: var(--pure-white);
 }
+
+@keyframes nav-elm-animation {
+    0% {
+        color: var(--primary);
+    }
+
+    100% {
+        color: var(--secondary-light);
+    }
+}
+
+/* ----------------__BANNER__-------------------- */
+
+
+.banner-container * {
+    color: var(--pure-white);
+}
+
+.container .banner-container {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    height: 60vh;
+
+}
+
+.container .banner-container img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    border-radius: 2em;
+    background-color: #000;
+    filter: brightness(70%);
+
+}
+
+.banner-container .banner-promo-text {
+    position: absolute;
+    top: 30%;
+    margin: 10%;
+}
+
+
+/* -------BANNER TEXTS-------- */
+
+
+.banner-promo-text h2 {
+    font-size: 4.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.banner-promo-text .banner-promo-description {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+
+/* --------------BANNER FORMS------------- */
+
+
+.banner-container .banner-em-form {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+}
+
+.textbox {
+    padding: 1em 1em;
+    font-size: 1.6em;
+    width: 28em;
+    border: none;
+
+    color: var(--dark-blue);
+    border-radius: 8px;
+}
+
+.textbox::placeholder {
+    color: var(--secondary);
+    font-weight: 100;
+    text-align: left;
+}
+
+.textbox:focus {
+    color: var(--dark-blue);
+}
+
+/* .banner-em-form .icon {
+    position: absolute;
+    top: 30%;
+    vertical-align: middle;
+    color: var(--secondary);
+    font-size: 2em;
+    font-weight: 100;
+} */
+
+
+
+.banner-em-form .banner-btn {
+    position: absolute;
+    right: 0;
+    top: 8%;
+    right: .5em;
+    padding: 1.3em 1.5em;
+    border-radius: .8em;
+    border: none;
+    background-color: var(--dark-blue);
+    color: var(--pure-white);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+
+/* ----------------___ABOUT US___--------------------- */
+
+
+.about-us {
+    margin: 10rem 0;
+}
+
+.about-us .prm-container {
+    display: flex;
+}
+
+.about-us .prm-container img {
+    border-radius: 2em;
+    height: 36.4em;
+    margin-right: 2.1em;
+}
+
+.about-us-info {
+    /* border: 1px solid red; */
+    display: inherit;
+    height: inherit;
+    flex-direction: column;
+}
+
+.about-us-info .title {
+    font-size: var(--title-font);
+    font-weight: 700;
+}
+
+.about-us-info .description {
+    font-size: 1.6em;
+    line-height: 2.3em;
+
+}
+
+.about-us-info .button-row {
+    /* border: 1px solid red; */
+    bottom: 0;
+    margin-top: auto;
+}
+
+.button-row .abt-contact-us {
+    background-color: var(--white);
+    margin-left: 1em;
+    color: var(--dark-blue);
+}
+
+
+/* --------__COMPANY REVIEW TILES___------- */
+
+
+.about-us .company-review-tiles {
+    margin-top: 20em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* overflow-x: scroll; */
+    /* flex-wrap: wrap; */
+}
+
+.company-review-tiles .review-tile {
+    height: 33em;
+    flex-basis: 20%;
+    padding: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.company-review-tiles .review-tile-img {
+    height: 10em;
+    width: 17.6em;
+    border: none;
+    border-radius: 2em;
+}
+
+.company-review-tiles .review-tile-title {
+    font-size: var(--descprtion-font-size);
+    font-weight: 400;
+
+}
+
+.company-review-tiles .review-tile-description {
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+
+/* -------__ABOUT US LOWER SEGMENT___-------- */
+
+
+.about-us-lower-seg .s-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+}
+
+.about-us-lower-seg .more-info-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.more-info-tiles .more-info-tile {
+    flex-basis: 18%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-border);
+    border-radius: 1.5em;
+    height: 15.7em;
+    margin: 1.5rem 1%;
+    padding: 2em 1.5em;
+    font-size: 1.4em;
+}
+
+.more-info-tile:first-child, .more-info-tile:last-child {
+    margin-left: 0;
+}
+
+.more-info-tile .fa-solid,
+.more-info-tile .fa-regular {
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+.more-info-tile .title {
+    margin-top: 2rem;
+
+}
+
+.more-info-tile .description {
+    font-size: 1.4rem;
+    color: var(--secondary);
+}
+
+
+/* ----------___FEATURES CONTAINER___------------ */
+
+
+.features-container {
+    margin-top: 5em;
+}
+
+.features-header .s-title {
+    font-weight: 700;
+    font-size: var(--title-font);
+
+}
+
+.features-header .description {
+    margin: 2rem 0px;
+    font-size: 1.6rem;
+    color: var(--secondary);
+}
+
+.features-container .feature-list-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.feature-list-tiles .feature-tile {
+    flex-basis: 18%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-border);
+    border-radius: 1.5em;
+    height: 15.7em;
+    margin: 1.5rem 1%;
+    padding: 2em 1.5em;
+    font-size: 1.4em;
+}
+
+.feature-tile .fa-solid,
+.feature-tile .fa-regular {
+    font-size: 2rem;
+    color: var(--dark-blue);
+}
+
+.feature-list-tiles:first {
+    margin-left: 0;
+}
+
+
+.feature-tile .title {
+    margin-top: 2rem;
+
+}
+
+.feature-tile .description {
+    font-size: 1.4rem;
+    color: var(--secondary);
+}
+
+
+/* -----------___HIRE THROUGH US___-------------- */
+
+.hire-through-us * {
+    color: var(--pure-white);
+}
+
+.hire-through-us {
+    margin-top: 3em;
+}
+
+.hire-banner {
+    position: relative;
+}
+
+.hire-banner img {
+    width: 100%;
+    height: 60vh;
+    border: none;
+    border-radius: 2em;
+    object-fit: cover;
+    filter: brightness(85%);
+}
+
+
+.hire-banner-contents {
+    position: absolute;
+    display: block;
+    margin: 10%;
+    bottom: 10%;
+}
+
+.hire-banner-contents .hire-promo-title {
+    font-size: 4.2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hire-banner-contents .hire-promo-description {
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+
+.hire-banner-contents .hire-banner-btn {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+
+/* ----------------______TESTIMONIALS____------------- */
+
+
+.testimonials {
+    margin-top: 8vh;
+
+}
+
+.testimonials .title {
+    font-size: 2.1em;
+    font-weight: 600;
+
+}
+
+.testimonials .testimonial-carousel {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+
+.testimonial-carousel .carousel-tile {
+    margin: 1em 1em;
+    flex-basis: 33.33%;
+    text-align: center;
+    height: 50rem;
+}
+
+.testimonial-carousel .carousel-tile-img {
+    border: none;
+    border-radius: 100%;
+    height: 28.8em;
+    width: 28.8em;
+}
+
+.testimonials .testimonial-carousel .carousel-tile:first {
+    margin-left: 0;
+}
+
+.carousel-tile .carousel-tile-header {
+    font-size: 1.6em;
+    margin-top: .5em;
+}
+
+.carousel-tile .description {
+    color: var(--secondary);
+    font-size: 1.4em;
+}
+
+
+/*----------------____CONTACT US___-------------------- */
+
+
+.contact-us {
+    text-align: center;
+}
+
+.contact-us .title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+.contact-us form {
+    display: flex;
+
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contact-us .contact-textbox {
+    background-color: var(--white);
+
+}
+
+.contact-us .contact-label {
+    display: inline-block;
+    text-align: left;
+    margin-top: 1em;
+    bottom: .4em;
+
+
+}
+
+.contact-label p {
+    font-size: 1.4em;
+    font-weight: 400;
+}
+
+.contact-label .message {
+    padding-bottom: 20rem;
+}
+
+.contact-btn {
+    margin-top: 1em;
+    display: block;
+    width: 100%;
+}
+
+/* ------------MEDIA QUERIES-------------- */
+
+@media only screen and (max-width: 1530px) {
+    header .nav-social-media button .nav-ins {
+        display: none;
+    }
+
+    header .site-nav {
+        width: 80%;
+    }
+}
+
+
+
+
 
 
 /* img {
