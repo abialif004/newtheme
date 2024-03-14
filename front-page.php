@@ -40,36 +40,47 @@ $base_directory = get_template_directory_uri();
         <div class="company-review-tiles">
             <div class="review-tile">
                 <img src=<?php get_full_path('/assets/images/google_logo_picture.png') ?> class="review-tile-img" alt="Comapny Image/Logo">
+                <img src=<?php get_full_path("/assets/svg/google_logo.svg") ?> class="review-tile-svg" alt="Company Logo">
                 <h4 class="review-tile-title">Google</h4>
                 <p class="review-tile-description">"Testbyte has been a great partner for us. Their on-demand testing services have helped us improve the quality of our software and accelerate our release process."</p>
 
             </div>
             <div class="review-tile">
                 <img src=<?php get_full_path('/assets/images/uber_logo_picture.png') ?> class="review-tile-img" alt="Comapny Image/Logo">
+                <img src=<?php get_full_path("/assets/svg/uber_logo.svg") ?> class="review-tile-svg" alt="Company Logo">
+
                 <h4 class="review-tile-title">Uber</h4>
                 <p class="review-tile-description">"Testbyte has been a great partner for us. Their on-demand testing services have helped us improve the quality of our software and accelerate our release process."</p>
 
             </div>
             <div class="review-tile">
                 <img src=<?php get_full_path('/assets/images/microsoft_logo_picture.png') ?> class="review-tile-img" alt="Comapny Image/Logo">
+                <img src=<?php get_full_path("/assets/svg/microsoft_logo.svg") ?> class="review-tile-svg" alt="Company Logo">
+
                 <h4 class="review-tile-title">Microsoft</h4>
                 <p class="review-tile-description">"Testbyte has been a great partner for us. Their on-demand testing services have helped us improve the quality of our software and accelerate our release process."</p>
 
             </div>
             <div class="review-tile">
                 <img src=<?php get_full_path('/assets/images/amazon_logo_picture.png') ?> class="review-tile-img" alt="Comapny Image/Logo">
+                <img src=<?php get_full_path("/assets/svg/amazon_logo.svg") ?> class="review-tile-svg" alt="Company Logo">
+
                 <h4 class="review-tile-title">Amazon</h4>
                 <p class="review-tile-description">"Testbyte has been a great partner for us. Their on-demand testing services have helped us improve the quality of our software and accelerate our release process."</p>
 
             </div>
             <div class="review-tile">
                 <img src=<?php get_full_path('/assets/images/airbnb_logo_picture.png') ?> class="review-tile-img" alt="Comapny Image/Logo">
+                <img src=<?php get_full_path("/assets/svg/airbnb_logo.svg") ?> class="review-tile-svg" alt="Company Logo">
+
                 <h4 class="review-tile-title">Airbnb</h4>
                 <p class="review-tile-description">"Testbyte has been a great partner for us. Their on-demand testing services have helped us improve the quality of our software and accelerate our release process."</p>
 
             </div>
             <div class="review-tile">
                 <img src=<?php get_full_path('/assets/images/spotify_logo_picture.png') ?> class="review-tile-img" alt="Comapny Image/Logo">
+                <img src=<?php get_full_path("/assets/svg/spotify_logo.svg") ?> class="review-tile-svg" alt="Company Logo">
+
                 <h4 class="review-tile-title">Spotify</h4>
                 <p class="review-tile-description">"Testbyte has been a great partner for us. Their on-demand testing services have helped us improve the quality of our software and accelerate our release process."</p>
 
@@ -201,6 +212,7 @@ $base_directory = get_template_directory_uri();
             </div>
         </div>
     </div>
+    </div>
 </section>
 <section id="contact-us">
     <div class="contact-us">
@@ -226,5 +238,7 @@ $base_directory = get_template_directory_uri();
         </form>
     </div>
 </section>
+
+
 
 <?php get_footer() ?>

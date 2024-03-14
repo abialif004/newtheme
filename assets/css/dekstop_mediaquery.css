@@ -1,0 +1,30 @@
+@media (max-width: 1199.98px) {
+
+
+    /*--------------- HEADER--------------- */
+
+
+
+
+    .about-us {
+        margin-top: 30vh;
+    }
+
+
+
+}
+
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1225.98px) {
+
+
+
+    header .site-nav {
+        width: 100%;
+    }
+
+    .banner-container {
+        margin-top: 15vh;
+    }
+}

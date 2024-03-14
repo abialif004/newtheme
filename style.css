@@ -1,6 +1,6 @@
 /*
-Theme Name: newtheme
-Text Domain: newtheme
+Theme Name: MyTheme
+Text Domain: Mytheme
 Version: 1.0
 Description: Testbyte light theme
 Tags: Working, simple, single paged theme
@@ -23,7 +23,7 @@ Author URI: https://www.acetvm.com
     --green: #25D366;
     --pink: #ff00c3;
     --test-border: 1px solid green;
-    --red-test-border: 1p solid red;
+    --red-test-border: 1px solid red;
     --title-font: 4.8em;
     --padding-rectangular: 1.1em 12.5em;
     --size: 14px;
@@ -101,9 +101,6 @@ header .logo-container {
     height: inherit;
 }
 
-header .drawer-icon {
-    display: none;
-}
 
 /* header .nav-title .text-wrapper {
     display: inline;
@@ -131,6 +128,41 @@ header .nav-title .logo-text {
 }
 
 
+/* -------------SIDEBAR---------------- */
+
+#sidebar {
+    display: none;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--pure-white);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    width: 25em;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 999;
+
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+header .drawer-icon {
+    font-size: 2em;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: absolute;
+    right: 0;
+    padding: 1em 2em;
+    display: none;
+}
+
 /* -------Navigation Elements --------- */
 
 
@@ -140,10 +172,10 @@ header ul {
 }
 
 header .site-nav {
-    float: right;
-    /* display: flex; */
-    width: 70%;
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 header ul li {
@@ -166,13 +198,13 @@ header ul li a:hover {
 
 
 
+
 /* ------Navigaton Social Media Buttons------- */
 
 
 header .nav-social-media {
     /* border: 1px solid red; */
     display: flex;
-    width: 30%;
     /* border: 1px solid red; */
 }
 
@@ -202,7 +234,7 @@ header .nav-ins {
     align-self: center;
 }
 
-.nav-social-media .nav-wp i {
+.nav-wp i {
     vertical-align: middle;
     /* border: 1px solid red; */
     color: var(--green);
@@ -215,7 +247,7 @@ header .nav-ins {
     border-color: var(--pink);
 }
 
-.nav-social-media .nav-ins i {
+.nav-ins i {
     vertical-align: middle;
     /* border: 1px solid red; */
     color: var(--pink);
@@ -223,17 +255,22 @@ header .nav-ins {
     padding-left: .3rem;
 }
 
+.nav-social-media .cst-nav-btn .text {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
 
-
-/* -------Navigation  Animations */
-.nav-social-media .nav-wp:hover,
-.nav-social-media .nav-wp:hover>i {
+/* -------Navigation  Animations ---------*/
+.nav-wp:hover,
+.nav-wp:hover>i,
+.nav-wp:hover>span {
     background-color: var(--green);
     color: var(--pure-white);
 }
 
-.nav-social-media .nav-ins:hover,
-.nav-social-media .nav-ins:hover>i {
+.nav-ins:hover,
+.nav-ins:hover>i,
+.nav-ins:hover>span {
     background-color: var(--pink);
     color: var(--pure-white);
 }
@@ -250,6 +287,9 @@ header .nav-ins {
 
 /* ----------------__BANNER__-------------------- */
 
+body {
+    overflow-x: hidden;
+}
 
 .banner-container * {
     color: var(--pure-white);
@@ -259,7 +299,7 @@ header .nav-ins {
     position: relative;
     text-align: left;
     width: 100%;
-    height: 60vh;
+    height: 80vh;
 
 }
 
@@ -402,7 +442,7 @@ header .nav-ins {
 
 
 .about-us .company-review-tiles {
-    margin-top: 20em;
+    margin-top: 15em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -417,7 +457,7 @@ header .nav-ins {
     padding: 1em;
     margin-top: 2em;
     margin-bottom: 2em;
-    overflow: hidden;
+
 }
 
 .company-review-tiles .review-tile-img {
@@ -438,6 +478,9 @@ header .nav-ins {
     font-weight: 300;
 }
 
+.review-tile .review-tile-svg {
+    display: none;
+}
 
 /* -------__ABOUT US LOWER SEGMENT___-------- */
 
@@ -454,7 +497,7 @@ header .nav-ins {
 }
 
 .more-info-tiles .more-info-tile {
-    flex-basis: 18%;
+    flex-basis: 30%;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--light-border);
@@ -465,9 +508,6 @@ header .nav-ins {
     font-size: 1.4em;
 }
 
-.more-info-tile:first-child, .more-info-tile:last-child {
-    margin-left: 0;
-}
 
 .more-info-tile .fa-solid,
 .more-info-tile .fa-regular {
@@ -512,7 +552,7 @@ header .nav-ins {
 }
 
 .feature-list-tiles .feature-tile {
-    flex-basis: 18%;
+    flex-basis: 30%;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--light-border);
@@ -543,7 +583,6 @@ header .nav-ins {
     font-size: 1.4rem;
     color: var(--secondary);
 }
-
 
 /* -----------___HIRE THROUGH US___-------------- */
 
@@ -619,7 +658,7 @@ header .nav-ins {
 
 .testimonial-carousel .carousel-tile {
     margin: 1em 1em;
-    flex-basis: 33.33%;
+    flex-basis: 20%;
     text-align: center;
     height: 50rem;
 }
@@ -661,7 +700,6 @@ header .nav-ins {
 
 .contact-us form {
     display: flex;
-
     flex-direction: column;
     align-items: center;
 
@@ -698,31 +736,27 @@ header .nav-ins {
 
 /* ------------MEDIA QUERIES-------------- */
 
-@media only screen and (max-width: 1530px) {
+/* @media only screen and (max-width: 1530px) {
     header .nav-social-media button .nav-ins {
         display: none;
     }
 
+
     header .site-nav {
+        margin-left: auto;
         width: 80%;
-    }
-}
+        /* border: var(--test-border); */
+
+/* } */
+
+/* } */
 
 
 
+@media (max-width:1526.98) {}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
 
 
-
-/* img {
-    width: 80%;
-    height: 512px;
-}
-
-.nav-items {
-    list-style-type: none;
-}
-
-.nav-items .nav-item, a {
-    float: left;
-    padding: 0px 10px;
-} */
+/* // Large devices (desktops, less than 1200px) */

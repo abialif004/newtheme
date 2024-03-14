@@ -1,0 +1,38 @@
+/* // Medium devices (tablets, less than 992px) */
+
+
+
+
+@media (max-width: 991.98px) {}
+
+
+
+
+
+@media (max-width:1027.98) {
+
+    header .site-nav {
+        justify-content: flex-end;
+    }
+
+    header .site-nav .desktop-nav,
+    header .site-nav .nav-social-media {
+        display: none;
+        border: var(--test-border);
+    }
+
+    .nav-title .drawer-icon {
+        display: flex;
+        margin: 0px 2em 0px;
+        padding: 0;
+
+    }
+
+    header .nav-social-media {
+        border: var(--test-border);
+    }
+
+    .company-review-tiles .review-tile {
+        flex-basis: 10%;
+    }
+}
